@@ -1,0 +1,5 @@
+# Toolchain pin for rustup users. Keep in sync with mise.toml `rust`.
+[toolchain]
+channel = "1.97.1"
+components = ["clippy", "rustfmt"]
+profile = "minimal"

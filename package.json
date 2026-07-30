@@ -1,0 +1,23 @@
+{
+  "name": "Repolex monorepo",
+  "private": true,
+  "description": "Repolex Rust and TypeScript monorepo",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "prepare": "lefthook install"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "lefthook": "catalog:",
+    "oxfmt": "catalog:",
+    "oxlint": "catalog:",
+    "tsdown": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  },
+  "engines": {
+    "node": ">=24.18.1"
+  },
+  "packageManager": "pnpm@11.18.0"
+}

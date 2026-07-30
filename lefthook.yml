@@ -1,0 +1,27 @@
+# Git hooks for Repolex (https://lefthook.dev)
+# Install: mise exec -- pnpm install  (prepare → lefthook install)
+# Manual:  mise exec -- pnpm exec lefthook install
+# Skip once: LEFTHOOK=0 git commit ...
+# Run manually: mise exec -- pnpm exec lefthook run pre-commit
+
+min_version: 1.11.0
+
+pre-commit:
+  parallel: true
+  commands:
+    oxfmt:
+      glob: "*.{js,mjs,cjs,ts,mts,cts,json,jsonc}"
+      exclude:
+        - pnpm-lock.yaml
+        - "**/package-lock.json"
+      run: mise exec -- pnpm exec oxfmt {staged_files}
+      stage_fixed: true
+
+    oxlint:
+      glob: "*.{js,mjs,cjs,ts,mts,cts}"
+      run: mise exec -- pnpm exec oxlint {staged_files}
+
+    rustfmt:
+      glob: "*.rs"
+      run: mise exec -- cargo fmt -- {staged_files}
+      stage_fixed: true
