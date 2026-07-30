@@ -48,6 +48,18 @@ Use the smallest applicable skill set and read each `SKILL.md` before acting.
 
 Do not invoke conditional skills for paths or product surfaces that do not exist.
 
+### Issue tracker
+
+Issues and PRDs are tracked in GitHub Issues. See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Use the five canonical default triage labels. See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+Use a single-context domain-doc layout. See `docs/agents/domain.md`.
+
 ## Specifications and agent workflow
 
 Read [README.md](README.md) and [docs/README.md](docs/README.md) first. Follow `docs/agents/` and preserve unrelated dirty-worktree changes.
